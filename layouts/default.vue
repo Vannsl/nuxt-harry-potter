@@ -1,10 +1,23 @@
 <template>
-  <div class="flex justify-center h-full">
-    <div class="container p-8">
-      <nuxt />
+  <div>
+    <the-navbar />
+    <div class="flex justify-center h-screen bg-gray-300">
+      <div class="container p-8">
+        <nuxt />
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+import TheNavbar from '@/components/TheNavbar'
+
+export default {
+  components: {
+    'the-navbar': TheNavbar
+  }
+}
+</script>
 
 <style>
 html {
