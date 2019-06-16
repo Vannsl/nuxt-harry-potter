@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        worker-conf
+        workshop
       </h1>
       <h2 class="subtitle">
         Workshop: Nuxt.js - VueJS SSR

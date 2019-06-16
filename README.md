@@ -1,4 +1,4 @@
-# worker-conf
+# workshop
 
 > Workshop: Nuxt.js - VueJS SSR
 
