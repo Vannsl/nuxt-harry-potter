@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Character from '@/components/character'
 
 export default {
@@ -30,11 +31,9 @@ export default {
     }
   },
   mounted() {
-    fetch('https://hp-api.herokuapp.com/api/characters')
+    axios.get('https://hp-api.herokuapp.com/api/characters')
       .then((response) => {
-        response.json().then((characters) => {
-          this.characters = characters
-        })
+        this.characters = response.data
       })
   }
 }
