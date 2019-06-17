@@ -30,11 +30,9 @@ export default {
       characters: []
     }
   },
-  mounted() {
-    axios.get('https://hp-api.herokuapp.com/api/characters')
-      .then((response) => {
-        this.characters = response.data
-      })
+  async mounted() {
+    const { data } = await axios.get('https://hp-api.herokuapp.com/api/characters')
+    this.characters = data
   }
 }
 </script>
