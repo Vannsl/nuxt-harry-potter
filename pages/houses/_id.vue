@@ -28,9 +28,15 @@ export default {
     const { id } = params
     return ['gryffindor', 'slytherin', 'hufflepuff', 'ravenclaw'].includes(id)
   },
+  data() {
+    return {
+      id: this.$route.params.id
+    }
+  },
   computed: {
     characters() {
-      return this.$store.state.characters.all
+      // no $params here! -> clientside
+      return this.$store.state.characters[this.id]
     }
   },
   async fetch({ store, params }) {
