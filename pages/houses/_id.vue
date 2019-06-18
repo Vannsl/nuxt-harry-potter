@@ -33,8 +33,8 @@ export default {
       return this.$store.state.characters.all
     }
   },
-  fetch({ store }) {
-    store.dispatch('characters/fetchAllCharacters')
+  async fetch({ store, params }) {
+    await store.dispatch('characters/fetchHouseCharacters', params.id)
   }
 }
 </script>
