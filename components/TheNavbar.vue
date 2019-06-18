@@ -4,8 +4,35 @@
       to="/"
       class="logo bg-cover block"
     />
-    <nuxt-link to="/characters">
+    <nuxt-link
+      to="/characters"
+      class="px-1"
+    >
       Characters
+    </nuxt-link>
+    <nuxt-link
+      to="/houses/gryffindor"
+      class="px-1"
+    >
+      Gryffindor
+    </nuxt-link>
+    <nuxt-link
+      to="/houses/slytherin"
+      class="px-1"
+    >
+      Slytherin
+    </nuxt-link>
+    <nuxt-link
+      to="/houses/ravenclaw"
+      class="px-1"
+    >
+      Ravenclaw
+    </nuxt-link>
+    <nuxt-link
+      to="/houses/hufflepuff"
+      class="px-1"
+    >
+      Hufflepuff
     </nuxt-link>
   </div>
 </template>
