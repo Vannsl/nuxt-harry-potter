@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Character from '@/components/character'
 
 export default {
@@ -30,9 +29,8 @@ export default {
       characters: []
     }
   },
-  async asyncData() {
-    const { data } = await axios.get('https://hp-api.herokuapp.com/api/characters')
-    const characters = data
+  async asyncData({ $axios }) {
+    const characters = await $axios.$get('https://hp-api.herokuapp.com/api/characters')
     return {
       characters
     }
