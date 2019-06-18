@@ -43,6 +43,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'https://hp-api.herokuapp.com/api/'
   },
   /*
   ** Build configuration

@@ -30,7 +30,7 @@ export default {
     }
   },
   async asyncData({ $axios }) {
-    const characters = await $axios.$get('https://hp-api.herokuapp.com/api/characters')
+    const characters = await $axios.$get('characters')
     return {
       characters
     }
