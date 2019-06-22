@@ -21,6 +21,19 @@ import Character from '@/components/Character'
 
 export default {
   name: 'Houses',
+  head() {
+    return {
+      title: `${this.capitalizedId} HP Characters`,
+      meta: [
+        {
+          name: 'twitter:title', content: 'My first nuxtjs app with Vannsl'
+        },
+        {
+          name: 'twitter:description', content: 'Nuxtjs application containing all of the awesome HP characters'
+        }
+      ]
+    }
+  },
   components: {
     character: Character
   },
@@ -37,6 +50,9 @@ export default {
     characters() {
       // no $params here! -> clientside
       return this.$store.state.characters[this.id]
+    },
+    capitalizedId() {
+      return `${this.id.charAt(0).toUpperCase()}${this.id.substring(1)}`
     }
   },
   async fetch({ store, params }) {
