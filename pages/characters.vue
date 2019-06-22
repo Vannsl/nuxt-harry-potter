@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Character from '@/components/character'
+import Character from '@/components/Character'
 
 export default {
   name: 'Characters',
