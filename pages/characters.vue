@@ -21,6 +21,19 @@ import Character from '@/components/Character'
 
 export default {
   name: 'Characters',
+  head() {
+    return {
+      title: 'All HP Characters',
+      meta: [
+        {
+          name: 'twitter:title', content: 'My first nuxtjs app with Vannsl'
+        },
+        {
+          name: 'twitter:description', content: 'Nuxtjs application containing all of the awesome HP characters'
+        }
+      ]
+    }
+  },
   components: {
     character: Character
   },
