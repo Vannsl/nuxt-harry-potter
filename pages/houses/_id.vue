@@ -1,0 +1,46 @@
+<template>
+  <div>
+    <h1 class="text-5xl">
+      Harry Potter Characters
+    </h1>
+    <div class="flex flex-wrap justify-around">
+      <character
+        v-for="character in characters"
+        :key="character.name"
+        :name="character.name"
+        :image="character.image"
+        :house="character.house"
+        class="w-5/12 mx-1 my-2"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+import Character from '@/components/Character'
+
+export default {
+  name: 'Houses',
+  components: {
+    character: Character
+  },
+  validate({ params }) {
+    const { id } = params
+    return ['gryffindor', 'slytherin', 'hufflepuff', 'ravenclaw'].includes(id)
+  },
+  data() {
+    return {
+      id: this.$route.params.id
+    }
+  },
+  computed: {
+    characters() {
+      // no $params here! -> clientside
+      return this.$store.state.characters[this.id]
+    }
+  },
+  async fetch({ store, params }) {
+    await store.dispatch('characters/fetchHouseCharacters', params.id)
+  }
+}
+</script>
