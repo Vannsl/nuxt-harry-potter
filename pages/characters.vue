@@ -24,16 +24,13 @@ export default {
   components: {
     character: Character
   },
-  data() {
-    return {
-      characters: []
+  computed: {
+    characters() {
+      return this.$store.state.characters.all
     }
   },
-  async asyncData({ $axios }) {
-    const characters = await $axios.$get('characters')
-    return {
-      characters
-    }
+  async fetch({ store }) {
+    await store.dispatch('characters/fetchAllCharacters')
   }
 }
 </script>
