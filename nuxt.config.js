@@ -1,8 +1,9 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
 
   generate: {
+    fallback: true,
     routes: [
       '/houses/gryffindor',
       '/houses/slytherin',
