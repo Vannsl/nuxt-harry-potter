@@ -21,6 +21,7 @@ import Character from '@/components/Character'
 
 export default {
   name: 'Houses',
+  layout: ({ params }) => params.id === 'slytherin' ? 'green' : 'default',
   head() {
     return {
       title: `${this.capitalizedId} HP Characters`,

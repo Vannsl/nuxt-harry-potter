@@ -21,6 +21,7 @@ import Character from '@/components/Character'
 
 export default {
   name: 'Characters',
+  layout: 'light',
   head() {
     return {
       title: 'All HP Characters',
