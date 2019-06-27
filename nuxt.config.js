@@ -1,6 +1,15 @@
 
 export default {
   mode: 'universal',
+
+  generate: {
+    routes: [
+      '/houses/gryffindor',
+      '/houses/slytherin',
+      '/houses/hufflepuff',
+      '/houses/ravenclaw'
+    ]
+  },
   /*
   ** Headers of the page
   */
